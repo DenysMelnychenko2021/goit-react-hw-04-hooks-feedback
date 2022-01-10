@@ -3,7 +3,12 @@ import s from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) =>
   options.map(el => (
-    <button key={el} className={s.Button} onClick={() => onLeaveFeedback(el)}>
+    <button
+      type="button"
+      key={el}
+      className={s.Button}
+      onClick={() => onLeaveFeedback(el)}
+    >
       {el.toUpperCase()}
     </button>
   ));
